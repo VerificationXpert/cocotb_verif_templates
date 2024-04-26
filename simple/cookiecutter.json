@@ -1,0 +1,8 @@
+{
+    "project_name": "sample",
+    "author": "",
+    "dut": "sample",
+    "clock_name": "clk",
+    "reset_name": "rst_n",
+    "reset_polarity": false
+}
