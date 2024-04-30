@@ -4,5 +4,6 @@
     "dut": "sample",
     "clock_name": "clk",
     "reset_name": "rst_n",
-    "reset_polarity": false
+    "reset_polarity": false,
+    "simulator": ["verilator","icarus","vcs","questa","modelsim"]
 }

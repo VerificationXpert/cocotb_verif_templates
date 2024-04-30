@@ -27,7 +27,7 @@ from cocotb.runner import get_runner
 
 def test_{{cookiecutter.dut}}_runner() -> None:
     hdl_toplevel_lang:str = os.getenv("HDL_TOPLEVEL_LANG", "verilog")
-    sim:str = os.getenv("SIM", "icarus")
+    sim:str = os.getenv("SIM", "{{cookiecutter.simulator}}")
     testcase:str = os.getenv("testcase", "")
 
     proj_path:Path = Path(__file__).resolve().parent
