@@ -9,19 +9,22 @@ import os
 import random
 from pathlib import Path
 
+# Sample Testcase for invertor logic. 
+# Please remove this testcase and add your own testcase
 @cocotb.test()
 async def hello_{{cookiecutter.dut}}_test(dut) -> None:
     
-    # Assert Initial output is unknown
-    assert LogicArray(dut.a_not.value) == LogicArray("X")
-
-    Timer(10,'ps')
-
     dut.a.value = 1
 
-    Timer(10,'ps')
+    await Timer(10,'ps')
 
     assert dut.a_not.value == 0
+    
+    dut.a.value = 0
+
+    await Timer(10,'ps')
+
+    assert dut.a_not.value == 1
 
 from cocotb.runner import get_runner
 
