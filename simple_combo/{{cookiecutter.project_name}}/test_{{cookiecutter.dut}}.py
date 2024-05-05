@@ -21,7 +21,7 @@ async def hello_{{cookiecutter.dut}}_test(dut) -> None:
 
     Timer(10,'ps')
 
-    assert dut.a.not.value == 0
+    assert dut.a_not.value == 0
 
 from cocotb.runner import get_runner
 
