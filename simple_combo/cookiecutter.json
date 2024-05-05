@@ -1,0 +1,6 @@
+{
+    "project_name": "inverter",
+    "author": "verificationxpert.com",
+    "dut": "inverter",
+    "simulator": ["verilator","icarus","vcs","questa","modelsim"]
+}
