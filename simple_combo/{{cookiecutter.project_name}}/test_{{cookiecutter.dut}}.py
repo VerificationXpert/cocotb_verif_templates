@@ -33,6 +33,10 @@ def test_{{cookiecutter.dut}}_runner() -> None:
     sim:str = os.getenv("SIM", "{{cookiecutter.simulator}}")
     testcase:str = os.getenv("testcase", "")
 
+    precision:str = os.getenv("TIMESCALE_PRECISION", "ps")
+
+    timescale = (f"1{precision}", f"1{precision}")
+
     proj_path:Path = Path(__file__).resolve().parent
 
     verilog_sources = []
@@ -46,6 +50,7 @@ def test_{{cookiecutter.dut}}_runner() -> None:
         vhdl_sources=vhdl_sources,
         hdl_toplevel="{{cookiecutter.dut}}",
         always=True,
+        timescale=timescale,
     )
 
     runner.test(hdl_toplevel="{{cookiecutter.dut}}", test_module="test_{{cookiecutter.dut}},",testcase=testcase)
