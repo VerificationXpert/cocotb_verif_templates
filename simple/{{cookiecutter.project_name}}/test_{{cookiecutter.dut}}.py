@@ -3,7 +3,7 @@
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import ClockCycles,RisingEdge
-from cocotb.version import __version__
+
 
 import os
 import random
